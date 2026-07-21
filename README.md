@@ -56,7 +56,7 @@ Configuración personal usada en i3/xrandr:
 Desde mi Arch Linux:
 
 ```bash
-git clone https://github.com/caxitsecurity/ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-.git
+git clone https://github.com/caxitsecurity/Arch-Linux_Personal.git
 cd ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-
 chmod +x scripts/backup-dotfiles.sh
 ./scripts/backup-dotfiles.sh
@@ -70,7 +70,7 @@ git push
 ## Restaurar en una instalación nueva
 
 ```bash
-git clone https://github.com/caxitsecurity/ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-.git
+git clone https://github.com/caxitsecurity/Arch-Linux_Personal.git
 cd ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-
 chmod +x scripts/install-dotfiles.sh
 ./scripts/install-dotfiles.sh
