@@ -1,4 +1,4 @@
-## main.sh de mi config personal de monitores secundario a la izq, prinicpal derecha, con 200hz etc.
+## screnlayout.sh de mi config personal de monitores secundario a la izq, prinicpal derecha, con 200hz etc. xrandr en zsh
 #!/bin/bash
 
 xrandr --output DVI-I-1 --mode 1366x768 --rate 59.79 --pos 0x0 \
