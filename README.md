@@ -1,6 +1,6 @@
-# ArchPersonal - Arch Linux + i3 + Polybar + Picom
+# Arch Linux Personal
 
-Repositorio personal de configuración para mi entorno **Arch Linux ligero.**
+Repositorio personal de configuración para mi entorno **Arch Linux.**
 > Este repo es para respaldar y restaurar mi entorno gráfico personal.
 
 ## Setup principal
@@ -8,13 +8,13 @@ Repositorio personal de configuración para mi entorno **Arch Linux ligero.**
 | Área | Configuración |
 |---|---|
 | Sistema | Arch Linux |
-| Window Manager | i3wm |
-| Barra | Polybar tipo isla superior |
-| Compositor | Picom |
-| Terminal | Alacritty / Kitty |
-| Shell | Zsh + Starship |
-| Lanzador | Rofi / dmenu |
-| Tema visual | Dracula / purple / minimalista |
+| Window Manager | i3 la llea |
+| Barra | Polybar |
+| Compositor | Picom (Lo quité por rendimiento) |
+| Terminal | Alacritty |
+| Shell | zsg |
+| Lanzador | Rofi con dmenu |
+| Tema visual | Dracula Purple |
 | Fuente | JetBrainsMono Nerd Font |
 
 ## Monitores
@@ -35,10 +35,8 @@ Configuración personal usada en i3/xrandr:
 ├── config/
 │   ├── i3/
 │   ├── polybar/
-│   ├── picom/
 │   ├── rofi/
 │   ├── alacritty/
-│   ├── kitty/
 │   ├── fastfetch/
 │   └── starship.toml
 ├── home/
@@ -84,7 +82,7 @@ Después reiniciar i3:
 Mod+Shift+R
 ```
 
-O cerrar sesión y volver a entrar.
+O reboot y volver a entrar.
 
 ## Instalar paquetes base
 
