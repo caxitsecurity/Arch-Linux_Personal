@@ -1,8 +1,7 @@
-
-#editamos el alacritty toml con nano primero
+## Editamos el alacritty toml con nano primero
 nano ~/.config/alacritty/alacritty.toml
 
-# pegas esto yerrra
+## pegas esto yerrra
 [font]
 size = 13
 
