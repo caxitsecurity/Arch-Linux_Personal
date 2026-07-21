@@ -1,0 +1,8 @@
+nano ~/.config/alacritty/alacritty.toml
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
