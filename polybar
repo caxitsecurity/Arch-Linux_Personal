@@ -1,3 +1,5 @@
+# que no se te olvide cambiar el gaps top del i3 antes de aplicarla o quedara la zorra GAPS TOP 52 creo que era, anda toketando x ahi
+
 [colors]
 background = #55282a36
 foreground = #f8f8f2
@@ -13,8 +15,13 @@ yellow = #f1fa8c
 [bar/main]
 monitor = DP-1
 
+#esto define en pixeles el ancho y largo del polybar, 1600 y no 1920 para que quede centrada y no use todo el monitor, si tu monitor es penca y 
+# tiene menos res calcula el ancho bien para que no quede la fox con el resto de configuraciones pu aweonao, si no sabes como dile a alguna IA de confianza que te ayude con esto.
 width = 1600
+
+#este es en pixeles en altura caxai
 height = 38
+#esto es el borde
 radius = 7
 offset-x = 160
 offset-y = 5
@@ -31,6 +38,8 @@ border-color = #55bd93f9
 font-0 = JetBrainsMono Nerd Font:size=10;2
 font-1 = JetBrainsMono Nerd Font:size=12;3
 
+
+#fixea el polybar y lo centra en la pantalla
 wm-restack = i3
 override-redirect = true
 fixed-center = true
