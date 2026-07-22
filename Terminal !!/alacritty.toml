@@ -1,5 +1,5 @@
 ## Editamos el alacritty toml con nano primero
-nano ~/.config/alacritty/alacritty.toml
+# nano ~/.config/alacritty/alacritty.toml
 
 ## pegas esto yerrra
 [font]
