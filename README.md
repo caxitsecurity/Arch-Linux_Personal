@@ -1,107 +1,153 @@
 # Arch Linux Personal
 
-Repositorio personal de configuración para mi entorno **Arch Linux.**
-> Este repo es para respaldar y restaurar mi entorno gráfico personal.
+Repositorio personal con la configuración y documentación de mi entorno de trabajo en **Arch Linux**.
 
-## Setup principal
+El objetivo de este proyecto es mantener un respaldo organizado de mi configuración para poder reconstruir mi sistema rápidamente después de una instalación limpia, además de documentar cada componente para comprender cómo funciona y facilitar futuras modificaciones.
 
-| Área | Configuración |
-|---|---|
-| Sistema | Arch Linux |
-| Window Manager | i3 la llea |
+---
+
+# Especificaciones del sistema
+
+| Componente | Configuración |
+|------------|---------------|
+| Distribución | Arch Linux |
+| Window Manager | i3 |
 | Barra | Polybar |
-| Compositor | Picom (Lo quité por rendimiento) |
+| Compositor | Picom *(eliminado por rendimiento)* |
 | Terminal | Alacritty |
 | Shell | Zsh |
-| Lanzador | Rofi con dmenu |
-| Tema visual | Dracula Purple |
+| Prompt | Starship |
+| Lanzador | Rofi (modo dmenu) |
+| Tema | Dracula Purple |
 | Fuente | JetBrainsMono Nerd Font |
 
-## Monitores
+---
 
-Configuración personal usada en i3/xrandr:
+# Monitores
+
+Configuración utilizada habitualmente.
 
 | Monitor | Posición | Resolución | Frecuencia |
-|---|---:|---:|---:|
-| Principal | Derecha | 1920x1080 | 200Hz |
-| Secundario | Izquierda | 1366x768 | 60Hz |
+|----------|----------|------------|------------|
+| Principal | Derecha | 1920×1080 | 200 Hz |
+| Secundario | Izquierda | 1366×768 | 60 Hz |
 
-> En mi Arch actual el monitor principal suele ser `DP-1`. El secundario puede aparecer como `DVI-I-1` o `DVI-D-1`, así que antes de aplicar scripts de pantalla conviene revisar con `xrandr`.
+Antes de ejecutar cualquier configuración relacionada con monitores, verificar los nombres de las salidas de vídeo:
 
-## Estructura del repo
+```bash
+xrandr
+```
+
+En mi equipo normalmente corresponden a:
+
+- Principal: `DP-1`
+- Secundario: `DVI-I-1` o `DVI-D-1`
+
+---
+
+# Estructura del repositorio
 
 ```text
 .
-├── config/
-│   ├── i3/
-│   ├── polybar/
-│   ├── rofi/
-│   ├── alacritty/
-│   ├── fastfetch/
-│   └── starship.toml
-├── home/
+├── README.md
+├── SECURITY.md
+├── i3/
+│   └── config
+├── polybar/
+│   └── config.ini
+├── terminal/
+│   ├── README.md
 │   ├── .zshrc
-│   ├── .xinitrc
-│   ├── .Xresources
-│   └── .screenlayout/
-├── scripts/
-│   ├── backup-dotfiles.sh
-│   ├── install-dotfiles.sh
+│   ├── starship.toml
+│   └── alacritty.toml
+├── packages/
 │   └── arch-packages.txt
-└── README.md
+└── screenlayout.sh
 ```
 
-## Respaldar mi configuración actual
+---
 
-Desde mi Arch Linux:
+# Restaurar paquetes
+
+Instalar todos los paquetes registrados:
 
 ```bash
-git clone https://github.com/caxitsecurity/Arch-Linux_Personal.git
-cd ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-
-chmod +x scripts/backup-dotfiles.sh
-./scripts/backup-dotfiles.sh
+sudo pacman -S --needed - < packages/arch-packages.txt
+```
 
+Si algún paquete ya no existe en los repositorios oficiales, instalarlo manualmente o buscarlo en AUR.
+
+---
+
+# Componentes
+
+## Terminal
+
+Contiene toda la configuración relacionada con el entorno de terminal.
+
+- Zsh
+- Starship
+- Alacritty
+
+---
+
+## i3
+
+Configuración completa del gestor de ventanas i3.
+
+---
+
+## Polybar
+
+Configuración personalizada de la barra de estado.
+
+---
+
+## Screen Layout
+
+`screenlayout.sh` contiene la configuración de los monitores mediante `xrandr`.
+
+Puede ejecutarse con:
+
+```bash
+chmod +x screenlayout.sh
+./screenlayout.sh
+```
+
+---
+
+# Actualizar la lista de paquetes
+
+Guardar todos los paquetes instalados explícitamente:
+
+```bash
+pacman -Qqe > packages/arch-packages.txt
+```
+
+---
+
+# Seguridad
+
+Antes de subir cambios al repositorio, revisar siempre:
+
+```bash
 git status
-git add .
-git commit -m "sync: actualizar dotfiles Arch i3"
-git push
+git diff
 ```
 
-## Restaurar en una instalación nueva
+Evitar subir:
 
-```bash
-git clone https://github.com/caxitsecurity/Arch-Linux_Personal.git
-cd ArchPersonal-Ligero-PCPotato-I3-Polybar-Picom.-
-chmod +x scripts/install-dotfiles.sh
-./scripts/install-dotfiles.sh
-```
+- claves SSH
+- credenciales
+- tokens
+- archivos personales
+- historiales del navegador
+- archivos temporales
 
-Después reiniciar i3:
+---
 
-```bash
-Mod+Shift+R
-```
+# Objetivo
 
-O reboot y volver a entrar.
+Este repositorio documenta mi entorno de trabajo en Arch Linux.
 
-## Instalar paquetes base
-
-```bash
-sudo pacman -S --needed - < scripts/arch-packages.txt
-```
-
-Si algún paquete cambia de nombre o no existe en los repos oficiales, instalarlo manualmente o buscarlo en AUR con `yay`.
-
-## Seguridad antes de subir cambios
-
-Antes de hacer `git add .`, revisar siempre:
-
-```bash
-git status
-git diff --cached
-```
-
-
-## Notas personales
-
-Este setup representa mi entorno de trabajo para Linux, Programación y ciberseguridad. La idea es Levantar mi Arch sin perder tiempo configurando todo desde cero DENUEVO.
+Más que almacenar archivos de configuración, busca servir como referencia para comprender cada componente del sistema y poder reconstruir el entorno completo de forma rápida, limpia y reproducible.
