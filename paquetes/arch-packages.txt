@@ -1,0 +1,111 @@
+# ============================================
+# Arch Linux - Paquetes PERSONALES
+# ============================================
+#
+# Este archivo contiene los paquetes que utilizo
+# en mi instalación de Arch Linux.
+#
+# Instalar todos:
+#
+# sudo pacman -S --needed - < packages/arch-packages.txt
+#
+# Actualizar la lista:
+# pacman -Qqe > packages/arch-packages.txt
+#
+# Nota:
+# La lista puede contener programas que ya no utilice.
+# Revísala antes de instalar en un sistema nuevo.
+#
+# ============================================
+
+alacritty
+alsa-firmware
+alsa-utils
+base
+base-devel
+bat
+bc
+btop
+discord
+dmenu
+dpkg
+efibootmgr
+fastfetch
+feh
+firefox
+flameshot
+flatpak
+gcc
+git
+gst-plugin-pipewire
+htop
+hugo
+i3-wm
+i3blocks
+i3lock
+i3status
+intel-ucode
+jdk-openjdk
+keepassxc
+libpulse
+libreoffice-fresh
+lightdm
+lightdm-gtk-greeter
+linux
+linux-firmware
+linux-headers
+linux-lts-headers
+lsd
+man-db
+nano
+neovim
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+nvtop
+obs-studio
+openssh
+pavucontrol
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+polybar
+protontricks
+python-pip
+rofi
+scrot
+smartmontools
+sof-firmware
+spotify-launcher
+starship
+steam
+sudo
+thunar
+tree
+ttf-dejavu
+ttf-firacode-nerd
+ttf-jetbrains-mono-nerd
+ttf-liberation
+ufw
+unzip
+vim
+virtualbox
+vmware-keymaps
+vulkan-radeon
+wget
+wireplumber
+xdg-utils
+xf86-video-amdgpu
+xf86-video-ati
+xorg-xinit
+xorg-xrandr
+xss-lock
+xterm
+yay
+yay-debug
+zram-generator
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
