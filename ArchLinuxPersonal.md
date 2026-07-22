@@ -12,7 +12,7 @@ Repositorio personal de configuración para mi entorno **Arch Linux.**
 | Barra | Polybar |
 | Compositor | Picom (Lo quité por rendimiento) |
 | Terminal | Alacritty |
-| Shell | zsg |
+| Shell | Zsh |
 | Lanzador | Rofi con dmenu |
 | Tema visual | Dracula Purple |
 | Fuente | JetBrainsMono Nerd Font |
