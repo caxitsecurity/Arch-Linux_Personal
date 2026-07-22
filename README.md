@@ -60,7 +60,7 @@ En mi equipo normalmente corresponden a:
 │   ├── .zshrc
 │   ├── starship.toml
 │   └── alacritty.toml
-├── packages/
+├── paquetes/
 │   └── arch-packages.txt
 └── screenlayout.sh
 ```
