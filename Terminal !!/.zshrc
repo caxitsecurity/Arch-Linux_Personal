@@ -1,8 +1,3 @@
-
-## Primero editamos con nano y ahi pegas el script nmas
-nano ~/.zshrc
-
-
 ## copia y pegas en el nano yerri
 autoload -U colors && colors
 
